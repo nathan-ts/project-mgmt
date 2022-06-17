@@ -1,11 +1,11 @@
-
 import './App.css';
+import ProjectsPage from './projects/ProjectsPage';
 
 function App() {
   return (
-    <blockquote cite="Michael Scott">
-        You miss 100% of the shots you don't take. -Wayne Gretzky
-    </blockquote>
+    <div className="container">
+      <ProjectsPage />
+    </div>
   );
 }
 
