@@ -19,9 +19,13 @@ root.render(
 reportWebVitals();
 
 function Greeter(props: any) {
-  return <h1>Hello, {props.first}</h1>;
+  return (
+    <h1>
+      Hello, {props.first} {props.last}
+    </h1>
+  );
 }
 
 root.render(
-  <Greeter first="Nathan" />
+  <Greeter first="Nathan" last="Tsang"/>
 );
