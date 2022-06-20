@@ -36,9 +36,9 @@ function Greeter(props: any) {
   );
 }
 
-// Greeter.propTypes = {
-//  name: PropTypes.string.isRequired,
-// };
+Greeter.propTypes = {
+ name: PropTypes.string.isRequired,
+};
 
 // class Greeter extends React.Component {
 //   render() {
@@ -48,5 +48,5 @@ function Greeter(props: any) {
 
 root.render(
   // <Greeter first="Nathan" last="Tsang"/>
-  <Greeter />
+  <Greeter name={1234}/>
 );
