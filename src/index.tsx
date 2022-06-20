@@ -18,6 +18,7 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+/*
 function Greeter(props: any) {
 // function Greeter(
 //   {first, last}: {
@@ -31,7 +32,13 @@ function Greeter(props: any) {
       Hello, {first} {last}
     </h1>
   );
-}
+}*/
+
+class Greeter extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+};
 
 root.render(
   <Greeter first="Nathan" last="Tsang"/>
