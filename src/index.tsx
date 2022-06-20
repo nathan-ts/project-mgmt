@@ -36,3 +36,5 @@ function Greeter(
 root.render(
   <Greeter first="Nathan" last="Tsang"/>
 );
+
+const element = <Greeter first="Nate" last="" />;
