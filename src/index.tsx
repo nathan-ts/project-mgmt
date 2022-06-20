@@ -18,14 +18,14 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// function Greeter(props: any) {
-function Greeter(
-  {first, last}: {
-    first: string, 
-    last: string
-  }
-) {
-  // const {first, last} = props;
+function Greeter(props: any) {
+// function Greeter(
+//   {first, last}: {
+//     first: string, 
+//     last: string
+//   }
+// ) {
+  const {first, last} = props;
   return (
     <h1>
       Hello, {first} {last}
@@ -37,4 +37,7 @@ root.render(
   <Greeter first="Nathan" last="Tsang"/>
 );
 
-const element = <Greeter first="Nate" last="" />;
+const element = <Greeter name="Nate" />;
+
+const person = { firstName: "Nate" };
+const element2 = <Greeter name={person.firstName} />;
