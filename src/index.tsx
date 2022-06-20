@@ -28,10 +28,10 @@ function Greeter(props: any) {
 //     last: string
 //   }
 // ) {
-  const {first, last} = props;
+  // const {first, last} = props;
   return (
     <h1>
-      Hello, {first} {last}
+      Hello, {props.name}!
     </h1>
   );
 }
@@ -40,13 +40,6 @@ Greeter.propTypes = {
  name: PropTypes.string.isRequired,
 };
 
-// class Greeter extends React.Component {
-//   render() {
-//     return <h1>Hello, {this.props.name}!</h1>;
-//   }
-// };
-
 root.render(
-  // <Greeter first="Nathan" last="Tsang"/>
-  <Greeter name={1234}/>
+  <Greeter name="Nathan T"/>
 );
