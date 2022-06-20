@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import PropTypes from "prop-types";
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -18,7 +20,7 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-/*
+
 function Greeter(props: any) {
 // function Greeter(
 //   {first, last}: {
@@ -32,19 +34,19 @@ function Greeter(props: any) {
       Hello, {first} {last}
     </h1>
   );
-}*/
+}
 
-class Greeter extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
-};
+// Greeter.propTypes = {
+//  name: PropTypes.string.isRequired,
+// };
+
+// class Greeter extends React.Component {
+//   render() {
+//     return <h1>Hello, {this.props.name}!</h1>;
+//   }
+// };
 
 root.render(
-  <Greeter first="Nathan" last="Tsang"/>
+  // <Greeter first="Nathan" last="Tsang"/>
+  <Greeter />
 );
-
-const element = <Greeter name="Nate" />;
-
-const person = { firstName: "Nate" };
-const element2 = <Greeter name={person.firstName} />;
