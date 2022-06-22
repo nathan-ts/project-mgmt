@@ -40,6 +40,6 @@ Greeter.propTypes = {
  name: PropTypes.string.isRequired,
 };
 
-root.render(
-  <Greeter name="Nathan T"/>
-);
+// root.render(
+//   <Greeter name="Nathan T"/>
+// );
