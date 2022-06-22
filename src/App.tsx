@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="container">
       {/* <ProjectsPage /> */}
-      <Hello name="Nathan" enthusiasmLevel={3}/>
+      <Hello name="Nathan" enthusiasmLevel={2}/>
     </div>
   );
 }
