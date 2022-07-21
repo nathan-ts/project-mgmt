@@ -61,4 +61,4 @@ class Button extends React.Component {
     return <button onClick={this.handleClick}>Click Me!</button>;
   }
 }
-root.render(<Button />);
+// root.render(<Button />);
