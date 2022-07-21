@@ -12,13 +12,18 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
+    <Button />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function handleClick() {
+  console.log('clicked');
+  return undefined;
+}
+
+function Button() {
+  return <button onClick={handleClick}>Click Me!</button>;
+}
 
 
 function Greeter(props: any) {
@@ -29,7 +34,7 @@ function Greeter(props: any) {
 //   }
 // ) {
   // const {first, last} = props;
-  
+
   // return (
   //   <h1>
   //     Hello, {props.name}!
@@ -44,3 +49,11 @@ function Greeter(props: any) {
 // root.render(
 //   <Greeter name="Nathan T"/>
 // );
+
+
+
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

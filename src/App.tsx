@@ -12,8 +12,5 @@ function App() {
   return (<></>);
 }
 
-function handleClick() {
-  console.log('clicked');
-}
 
 export default App;
