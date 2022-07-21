@@ -16,11 +16,16 @@ root.render(
 );
 
 function FruitListItem(props: { fruit: { id: number; name: any; }; }) {
-  function handleClick(id: number) {
+  function handleClick(e: React.MouseEvent<HTMLLIElement, MouseEvent>, id: number) {
+    console.log(e);
     console.log(`removed ${id}`);
   }
 
-  return <li onClick={() => handleClick(props.fruit.id)}>{props.fruit.name} </li>;
+  return (
+    <li onClick={(e) => handleClick(e, props.fruit.id)}>
+      {props.fruit.name}{' '}
+    </li>
+  );
 }
 
 function FruitList(props: { fruits: any[]; }) {
