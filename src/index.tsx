@@ -12,48 +12,32 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-    <Button />
   </React.StrictMode>
 );
 
-function handleClick() {
-  console.log('clicked');
-  return undefined;
+function FruitListItem(props: { fruit: { id: number; name: any; }; }) {
+  function handleClick(id: number) {
+    console.log(`removed ${id}`);
+  }
+
+  return <li onClick={() => handleClick(props.fruit.id)}>{props.fruit.name} </li>;
 }
 
-function Button() {
-  return <button onClick={handleClick}>Click Me!</button>;
+function FruitList(props: { fruits: any[]; }) {
+  const fruitListItems = props.fruits.map((fruit: { id: any; name: any }) => (
+    <FruitListItem key={fruit.id} fruit={fruit} />
+  ));
+  return <ul>{fruitListItems}</ul>;
 }
 
+const data = [
+  { id: 1, name: 'apple' },
+  { id: 2, name: 'orange' },
+  { id: 3, name: 'blueberry' },
+  { id: 4, name: 'banana' },
+  { id: 5, name: 'kiwi' },
+];
 
-function Greeter(props: any) {
-// function Greeter(
-//   {first, last}: {
-//     first: string, 
-//     last: string
-//   }
-// ) {
-  // const {first, last} = props;
-
-  // return (
-  //   <h1>
-  //     Hello, {props.name}!
-  //   </h1>
-  // );
-}
-
-// Greeter.propTypes = {
-//  name: PropTypes.string.isRequired,
-// };
-
-// root.render(
-//   <Greeter name="Nathan T"/>
-// );
-
-
-
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(
+  <FruitList fruits={data} />
+);
