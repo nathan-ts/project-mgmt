@@ -29,16 +29,17 @@ function Greeter(props: any) {
 //   }
 // ) {
   // const {first, last} = props;
-  return (
-    <h1>
-      Hello, {props.name}!
-    </h1>
-  );
+  
+  // return (
+  //   <h1>
+  //     Hello, {props.name}!
+  //   </h1>
+  // );
 }
 
-Greeter.propTypes = {
- name: PropTypes.string.isRequired,
-};
+// Greeter.propTypes = {
+//  name: PropTypes.string.isRequired,
+// };
 
 // root.render(
 //   <Greeter name="Nathan T"/>
